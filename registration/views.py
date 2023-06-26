@@ -221,9 +221,14 @@ class CalculateView(View):
                 results.append(round(math.pow(math.sqrt(w) + c, 2) / z, 5))
         arr = [1, 1.5278, 2, 2.4722, 3, 4]
         angles = [a * val for val in arr]
+        previous_x = x
+        previous_y = y
+
         context = {
             "results": results,
             "angles": angles,
+            "previous_x": previous_x,
+            "previous_y": previous_y,
         }
 
         return render(request, "our_service.html", context)

@@ -9,4 +9,13 @@
         "indent-size",
         "2"
     ],
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Gann-Math",
+            "database": "${workspaceFolder:Gann-Math}/db.sqlite3"
+        }
+    ],
+    "sqltools.useNodeRuntime": true,
 }
