@@ -1,15 +1,17 @@
+import json
 import math
+import os
+
 import requests
-from allauth.account.views import SignupView as AllauthSignupView, LoginView, LogoutView
+from allauth.account.views import LoginView, LogoutView
+from allauth.account.views import SignupView as AllauthSignupView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views import View
-from django.views.generic import TemplateView
-import os
-from dotenv import load_dotenv, find_dotenv
 from django.views.decorators.csrf import csrf_exempt
-import json
+from django.views.generic import TemplateView
+from dotenv import find_dotenv, load_dotenv
 
 from registration.models import Subscription
 
