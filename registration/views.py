@@ -42,7 +42,7 @@ class OurServiceView(LoginRequiredMixin, View):
     def get(self, request):
         try:
             subscription = Subscription.objects.get(user=request.user)
-            if subscription.status == "COMPLETED":
+            if subscription.is_active:
                 return render(request, "our_service.html")
             else:
                 return render(
