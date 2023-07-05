@@ -1,38 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 
-# class Subscription(models.Model):
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
-    # payment_id = models.CharField(max_length=255, null=True, blank=True)
-    # intent = models.CharField(max_length=255, null=True, blank=True)
-    # status = models.CharField(max_length=255, null=True, blank=True,default="COMPLETED")
-    # reference_id = models.CharField(max_length=255, null=True, blank=True)
-    # currency_code = models.CharField(max_length=3, null=True, blank=True,default="USD")
-    # amount_value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    # payee_email_address = models.EmailField(null=True, blank=True)
-    # payee_merchant_id = models.CharField(max_length=255, null=True, blank=True)
-    # full_name = models.CharField(max_length=255, null=True, blank=True)
-    # address_line_1 = models.CharField(max_length=255, null=True, blank=True)
-    # admin_area_2 = models.CharField(max_length=255, null=True, blank=True)
-    # postal_code = models.CharField(max_length=20, null=True, blank=True)
-    # country_code = models.CharField(max_length=2, null=True, blank=True)
-    # capture_id = models.CharField(max_length=255, null=True, blank=True)
-    # capture_status = models.CharField(max_length=255, null=True, blank=True)
-    # capture_amount_currency_code = models.CharField(max_length=3, null=True, blank=True)
-    # capture_amount_value = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
-    # final_capture = models.BooleanField(null=True, blank=True)
-    # seller_protection_status = models.CharField(max_length=255, null=True, blank=True)
-    # dispute_categories = models.JSONField(null=True, blank=True)
-    # create_time = models.DateTimeField(null=True, blank=True)
-    # update_time = models.DateTimeField(null=True, blank=True)
-    # payer_given_name = models.CharField(max_length=255, null=True, blank=True)
-    # payer_surname = models.CharField(max_length=255, null=True, blank=True)
-    # payer_email_address = models.EmailField(null=True, blank=True)
-    # payer_id = models.CharField(max_length=255, null=True, blank=True)
-    # payer_country_code = models.CharField(max_length=2, null=True, blank=True)
-    # links_href = models.URLField(null=True, blank=True)
-    # links_rel = models.CharField(max_length=255, null=True, blank=True)
-    # links_method = models.CharField(max_length=10, null=True, blank=True)
 
 class Subscription(models.Model):
     payment_id = models.CharField(max_length=255, null=True, blank=True, default="MANUAL")
