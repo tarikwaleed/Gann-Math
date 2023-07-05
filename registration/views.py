@@ -355,12 +355,11 @@ class GexBotZeroMaxView(LoginRequiredMixin, View):
         data = response.json()
         return JsonResponse(data)
 
-
 class SpxView(LoginRequiredMixin, View):
     def get(self, request):
         try:
             subscription = Subscription.objects.get(user=request.user)
-            if subscription.status == "COMPLETED":
+            if subscription.is_active:
                 context = {"api_key": GEX_BOT_API_KEY}
                 return render(request, "spx.html", context)
             else:
