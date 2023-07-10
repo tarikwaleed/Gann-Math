@@ -9,16 +9,26 @@ const data = 0;
 fetch(maxChangeUrl)
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById('max-change-1-a').textContent = data.one[0].toFixed(2);
-    document.getElementById('max-change-1-b').textContent = data.one[1].toFixed(2) + 'Bn';
-    document.getElementById('max-change-5-a').textContent = data.five[0].toFixed(2);
-    document.getElementById('max-change-5-b').textContent = data.five[1].toFixed(2) + 'Bn';
-    document.getElementById('max-change-10-a').textContent = data.ten[0].toFixed(2);
-    document.getElementById('max-change-10-b').textContent = data.ten[1].toFixed(2) + 'Bn';
-    document.getElementById('max-change-15-a').textContent = data.fifteen[0].toFixed(2);
-    document.getElementById('max-change-15-b').textContent = data.fifteen[1].toFixed(2) + 'Bn';
-    document.getElementById('max-change-30-a').textContent = data.thirty[0].toFixed(2);
-    document.getElementById('max-change-30-b').textContent = data.thirty[1].toFixed(2) + 'Bn';
+    document.getElementById('max-change-1-a').textContent =
+      data.one[0].toFixed(2);
+    document.getElementById('max-change-1-b').textContent =
+      data.one[1].toFixed(2) + 'Bn';
+    document.getElementById('max-change-5-a').textContent =
+      data.five[0].toFixed(2);
+    document.getElementById('max-change-5-b').textContent =
+      data.five[1].toFixed(2) + 'Bn';
+    document.getElementById('max-change-10-a').textContent =
+      data.ten[0].toFixed(2);
+    document.getElementById('max-change-10-b').textContent =
+      data.ten[1].toFixed(2) + 'Bn';
+    document.getElementById('max-change-15-a').textContent =
+      data.fifteen[0].toFixed(2);
+    document.getElementById('max-change-15-b').textContent =
+      data.fifteen[1].toFixed(2) + 'Bn';
+    document.getElementById('max-change-30-a').textContent =
+      data.thirty[0].toFixed(2);
+    document.getElementById('max-change-30-b').textContent =
+      data.thirty[1].toFixed(2) + 'Bn';
   })
   .catch((error) => {
     // Handle error
@@ -177,7 +187,7 @@ fetch(url)
                 xAxis: 0,
                 yAxis: roundedSpot.toString(),
                 lineStyle: {
-                  color: 'yello',
+                  color: 'rgb(0, 0, 139)',
                   type: 'dashed',
                 },
                 symbol: 'circle',
@@ -185,7 +195,8 @@ fetch(url)
                 label: {
                   show: true,
                   formatter: `Spot \n${spot}`,
-                  backgroundColor: 'rgba(255, 255, 0, 0.7)',
+                  // backgroundColor: 'rgba(255, 255, 0, 0.7)',
+                  backgroundColor: 'rgb(0, 0, 139)',
                   color: '#fff',
                   padding: [5, 10],
                   position: 'start',
