@@ -1,6 +1,16 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block styles %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'faq_popup_styles.css' %}"
+/>
+{% endblock styles %} {% block content %}
 <div class="row w-100">
   <!-- chart col -->
+  <button id="popupButton">Click Me</button>
+  <div id="popupContainer" style="display: none">
+    <p>Popup Text</p>
+  </div>
   <div class="col-xl-9 col-md-12 col-sm-12">
     <div id="chart-container"></div>
   </div>
@@ -184,4 +194,6 @@
   const apiKey = '{{ api_key }}';
 </script>
 <script src="{% static 'js/spx.js' %}"></script>
+<script src="{% static 'js/faq.js' %}"></script>
+
 {% endblock scripts %}
